@@ -1,0 +1,5 @@
+name: Elasticsearch 2.x Latest
+description: |
+  Updated Elasticsearch for the latest version of ES on Rancher
+version: 2.2.2-rancher1
+category: ELK

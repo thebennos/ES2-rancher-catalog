@@ -15,10 +15,12 @@ elasticsearch-datavolume-masters:
     - /usr/share/elasticsearch/config
     - /opt/rancher/bin
   entrypoint: /bin/true
+  image: thebennos/omm-elasticsearch-cluster:2.3.4
 elasticsearch-base-master:
   labels:
     elasticsearch.master.config.version: '0'
     io.rancher.container.hostname_override: container_name
+  image: thebennos/omm-elasticsearch-cluster:2.3.4
   net: "container:elasticsearch-masters"
   volumes_from:
     - elasticsearch-datavolume-masters

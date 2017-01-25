@@ -16,7 +16,7 @@ services:
       io.rancher.container.pull_image: always
       elasticsearch.datanode.config.version: '0'
   elasticsearch-datanodes:
-    image: thebennos/rancher-es2-dockerfile
+    image: rancher/elasticsearch-conf:v0.5.0
     links:
     - elasticsearch-masters:es-masters
     volumes_from:
@@ -68,7 +68,7 @@ services:
       io.rancher.container.pull_image: always
       elasticsearch.datanode.config.version: '0'
   elasticsearch-clients:
-    image: thebennos/rancher-es2-dockerfile
+    image: rancher/elasticsearch-conf:v0.5.0
     links:
     - elasticsearch-masters:es-masters
     volumes_from:
@@ -85,7 +85,7 @@ services:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
   elasticsearch-masters:
-    image: thebennos/rancher-es2-dockerfile
+    image: rancher/elasticsearch-conf:v0.5.0
     volumes_from:
     - elasticsearch-datavolume-masters
     labels:

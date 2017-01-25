@@ -77,7 +77,7 @@ services:
       io.rancher.sidekicks: elasticsearch-base-clients,elasticsearch-datavolume-clients
       io.rancher.container.hostname_override: container_name
       io.rancher.container.pull_image: always
-  es234ha:
+  esha:
     image: rancher/lb-service-haproxy:v0.4.9
     ports:
     - 9200:9200/tcp

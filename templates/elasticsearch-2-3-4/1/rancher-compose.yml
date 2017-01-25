@@ -1,6 +1,6 @@
 .catalog:
   name: "Elasticsearch"
-  version: "2.2.2-rancher1"
+  version: "2.3.4-rancher"
   description: "Elasticsearch. You know, for search"
   questions:
     - variable: cluster_name
@@ -9,12 +9,7 @@
       type: "string"
       required: true
       default: "es"
-    - variable: "kopf_port"
-      label: "Public Port"
-      description: "Unique public port for kopf"
-      type: "int"
-      default: 80
-      required: true
+
 elasticsearch-masters:
   metadata:
     elasticsearch:

@@ -1,5 +1,5 @@
 name: Elasticsearch 2.3.4 with Plugins
 description: |
-  Updated Elasticsearch for the latest version of ES on Rancher
+  Updated Elasticsearch 2.3.4 with Plugins HEAD, KOPF and Analysis plugins for ES on Rancher
 version: 2.3.4-rancher
 category: ELK

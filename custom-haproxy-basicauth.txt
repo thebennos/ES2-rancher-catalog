@@ -1,0 +1,8 @@
+global
+ userlist DB
+   user admin insecure-password admin
+   user frontend insecure-password mypassword
+
+backend 
+  acl AuthOK_DB http_auth(DB)
+  http-request auth realm DB if !AuthOK_DB

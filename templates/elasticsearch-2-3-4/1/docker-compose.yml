@@ -1,5 +1,20 @@
 version: '2'
 services:
+  kopf:
+    image: thebennos/elasticsearch-kopf
+    environment:
+      KOPF_SERVER_NAME: null
+      KOPF_ES_SERVERS: null
+      KOPF_BASIC_AUTH_LOGIN: null
+      KOPF_BASIC_AUTH_PASSWORD: null
+  hq:
+    image: thebennos/docker-nginx-elasticsearch-hq
+    environment:
+      HOST: elasticsearch-hq.example.com
+      PASSWORD: correcthorsebatterystaple
+      SCHEME: http
+      PORT: "80"
+
   elasticsearch-datavolume-clients:
     image: thebennos/omm-elasticsearch-cluster:2.3.4
     entrypoint:

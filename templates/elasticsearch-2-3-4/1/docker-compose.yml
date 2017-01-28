@@ -1,7 +1,7 @@
 version: '2'
 services:
   kopf:
-    image: thebennos/elasticsearch-kopf
+    image: lmenezes/elasticsearch-kopf
     environment:
       KOPF_SERVER_NAME: null
       KOPF_ES_SERVERS: null
